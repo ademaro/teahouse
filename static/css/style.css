@@ -1,0 +1,67 @@
+/*--CSS reset--*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td {margin:0;padding:0}
+address,caption,cite,code,dfn,th,var {font-style:normal;font-weight:normal}
+input,textarea,select {font-family:inherit;font-size:inherit;font-weight:inherit}
+h1,h2,h3,h4,h5,h6 {font-size:100%;font-weight:normal}
+table {border-collapse:collapse;border-spacing:0}
+abbr,acronym {border:0;font-variant:normal}
+fieldset,img {border:0}
+caption,th {text-align:left}
+q:before,q:after {content:''}
+sup {vertical-align:text-top}
+sub {vertical-align:text-bottom}
+del {text-decoration:line-through}
+ins {text-decoration:none}
+ul li {list-style:none}
+body {line-height:1}
+:focus {outline:0}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video {display:inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) {display:none;}
+
+/* colors:
+ * http://kuler.adobe.com/#themeID/1579595
+ */
+html, body {height:100%;width:100%;display:block;}
+body {background-color:#f5f5f5;color:#474F13;
+  font-family:Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans serif;}
+body > h3 {padding-top:20px;}
+h1,h2,h3,h4,h5 {color:#9fab4f;text-shadow:1px 1px 3px #B3BF67;font-size:50px;margin:5px 0 25px;}
+h2,h2 a {font-size:48px;}
+h3,h3 a {font-size:28px;}
+h4,h5 {font-size:18px;}
+a,p {font-size:18px;}
+a {color:#6791BF;}
+
+code {display:block;border:1px solid #ddd;padding:5px;}
+ul {padding-left:30px;}
+ul li {list-style-type:square;}
+
+::-moz-selection {background:#fe57a1;color:#fff;text-shadow:none;}
+::selection {background:#fe57a1;color:#fff;text-shadow:none;}
+
+a:hover {text-decoration:none;}
+
+.entry {width:800px;margin:10px auto;background:#eee;padding:10px 20px;display:block;border:1px solid #F2E49B;}
+.index .entry:hover {background:#f2edd3;}
+
+a#logo {
+  -webkit-transition: all 0.3s ease-out;  /* Saf3.2+, Chrome */
+     -moz-transition: all 0.3s ease-out;  /* FF4+ */
+      -ms-transition: all 0.3s ease-out;  /* IE10? */
+       -o-transition: all 0.3s ease-out;  /* Opera 10.5+ */
+          transition: all 0.3s ease-out;  
+background:url(http://img695.imageshack.us/img695/4489/cirnoj.png) no-repeat 50% 0;display:block;margin:10px auto;width:128px;height:128px;border:1px solid #EEE;text-indent: -9999px;}
+a#logo:hover {
+  -webkit-box-shadow: 0px 0px 4px #777;
+     -moz-box-shadow: 0px 0px 4px #777;
+          box-shadow: 0px 0px 4px #777;}
+
+
+a.admin {position:fixed;left:5px;bottom:5px;font-size:11px;padding:3px 5px;
+  -webkit-box-shadow: 0px 0px 4px #444; /* Saf3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+     -moz-box-shadow: 0px 0px 4px #444; /* FF3.5 - 3.6 */
+          box-shadow: 0px 0px 4px #444;}
+a.admin:hover {background:#363D06;color:#fff;}
+.tar {text-align:right;}

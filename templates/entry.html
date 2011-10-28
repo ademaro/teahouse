@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}
+  {{ entry.title }} @ Чайный домик
+{% endblock %}
+
+{% load markup %}
+
+{% block body %}
+{% if entry %}
+<div class="entry">
+  <h2>{{ entry.title }}</h2>
+  {{ entry.text|markdown }}
+  <br>
+  <small><!--Категория: {{ entry.category }}<br>-->Дата публикации: {{ entry.date_publication }}</small>
+  <p class="tar"><a href="/">На главную</a></p>
+</div>
+{% else %}
+<p>Нет такого поста.</p>
+{% endif %}
+{% endblock %}
