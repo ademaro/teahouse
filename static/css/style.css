@@ -34,6 +34,7 @@ h4,h5 {font-size:18px;}
 a,p {font-size:18px;}
 a {color:#6791BF;}
 
+small, small a {font-size:11px;}
 code {display:block;border:1px solid #ddd;padding:5px;}
 ul {padding-left:30px;}
 ul li {list-style-type:square;}

@@ -8,7 +8,7 @@ def index(request):
     return render_to_response('index.html', {'entry_list': entry_list})
 
 def entry(request, entry_id):
-    try
+    try:
       entry = Entry.objects.get(id=int(entry_id))
     except Entry.DoesNotExists:
       raise Http404()
