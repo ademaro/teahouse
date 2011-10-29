@@ -8,4 +8,5 @@ def index(request):
 
 def entry(request, entry_id):
     entry = Entry.objects.get(id=int(entry_id))
-    return render_to_response('entry.html', {'entry': entry})
+    tags = entry.category.all()
+    return render_to_response('entry.html', {'entry': entry, 'tags': tags})

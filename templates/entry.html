@@ -11,7 +11,8 @@
   <h2>{{ entry.title }}</h2>
   {{ entry.text|markdown }}
   <br>
-  <small><!--Категория: {{ entry.category }}<br>-->Дата публикации: {{ entry.date_publication }}</small>
+  <small>Категория: {{ tags }}<br>
+         Дата публикации: {{ entry.date_publication }}</small>
   <p class="tar"><a href="/">На главную</a></p>
 </div>
 {% else %}

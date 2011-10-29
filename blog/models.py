@@ -1,16 +1,19 @@
 # -*- coding: utf-8 -*-
 from django.db import models
 
+from pyadmin import verbose_name_cases, verbose_name_field_cases
+
 class Category(models.Model):
-    name = models.CharField(verbose_name='Категория', max_length=255, unique=True)
+    name = models.CharField(verbose_name = verbose_name_field_cases(u'категория', sort = u"категории"), max_length=250, unique=True)
 
     def __unicode__(self):
         return self.name
 
     class Meta:
         ordering = ['name']
-        verbose_name = 'Категория'
-        verbose_name_plural = 'Категории'
+        verbose_name = verbose_name_cases(u"категория", (u"категория", u"категории", u"категории"),
+            gender = 0, change = u"категорию", delete = u"категорию", add = u"категорию")
+        verbose_name_plural = verbose_name.plural
 
 class Entry(models.Model):
     title = models.CharField(verbose_name='Заголовок', max_length=255)
@@ -23,6 +26,6 @@ class Entry(models.Model):
         return '%s %s' % (self.title, self.category)
 
     class Meta:
-        ordering = ['date_publication']
+        ordering = ['-date_publication']
         verbose_name = 'Запись'
         verbose_name_plural = 'Записи'
