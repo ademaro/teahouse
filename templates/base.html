@@ -7,13 +7,20 @@
 </head>
 <body>
 <a href="/" id="logo">Чайный домик</a>
-
-{% block body %}{% endblock %}
-
+<div class="wrap">
+  <aside>
+    <h3>Категории</h3>
+    <nav>
+    {% for category in categories %}
+      <a href="/tags/{{ category.id }}/">{{ category }}</a>
+    {% endfor %}
+    </nav>
+  </aside>
+  <div id="main">
+  {% block body %}{% endblock %}
+  </div>
+</div>
 <a class="admin" href="/admin"/>Админка</a>
-
-
-
 
 
 <!-- Piwik --> 

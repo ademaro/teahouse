@@ -7,7 +7,7 @@ class CategoryAdmin(admin.ModelAdmin):
     search_fields = ('name',)
 
 class EntryAdmin(admin.ModelAdmin):
-    #list_display = ('title', 'category')
+    list_display = ('title', 'date_publication')
     fields = ('title', 'alias', 'text', 'category', 'date_publication')
     filter_horisontal = ('category')
 

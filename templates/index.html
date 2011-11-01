@@ -10,14 +10,17 @@
 {% if entry_list %}
   {% for entry in entry_list %}
   <div class="entry">
+    {% if category %}<h2>Записи из категории &laquo;{{ category }}&raquo;:</h2>{% endif %}
     <h2><a href="/entry/{{ entry.id }}/">{{ entry.title }}</a></h2>
     {{ entry.text|markdown }}
     <br>
-    <small><!--Категория: {{ entry.category }}<br>-->Дата публикации: {{ entry.date_publication }}</small>
+    <small>Дата публикации: {{ entry.date_publication }}</small>
   </div>
   {% endfor %}
 {% else %}
-  <p>Пока нет постов.</p>
+  <div class="entry">
+    <p>Записей{%if category %} из категории &laquo;{{ category }}&raquo;{% endif %} нету.</p>
+  </div>
 {% endif %}
 {% endblock %}
 </div>

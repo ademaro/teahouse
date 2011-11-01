@@ -4,7 +4,7 @@ from django.db import models
 from pyadmin import verbose_name_cases, verbose_name_field_cases
 
 class Category(models.Model):
-    name = models.CharField(verbose_name = verbose_name_field_cases(u'категория', sort = u"категории"), max_length=250, unique=True)
+    name = models.CharField(verbose_name = verbose_name_field_cases(u'категория', sort = u"категории", add = u"категорию"), max_length=250, unique=True)
 
     def __unicode__(self):
         return self.name
@@ -18,12 +18,13 @@ class Category(models.Model):
 class Entry(models.Model):
     title = models.CharField(verbose_name='Заголовок', max_length=255)
     alias = models.SlugField(verbose_name='Алиас для url', null=True, blank=True, unique=True)
-    text  = models.TextField(verbose_name='Текст', blank=True, help_text='Use Markdown syntax.')
+    text  = models.TextField(verbose_name='Текст', blank=True, help_text='Используйте синтаксис Markdown.')
     category = models.ManyToManyField(Category, verbose_name='Категория')
     date_publication = models.DateTimeField(verbose_name='Дата публикации', blank=True, null=True)
 
     def __unicode__(self):
-        return '%s %s' % (self.title, self.category)
+        return self.title
+        #return '%s %s' % (self.title, self.category)
 
     class Meta:
         ordering = ['-date_publication']
