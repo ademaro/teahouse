@@ -44,7 +44,7 @@ ul li {list-style-type:square;}
 
 a:hover {text-decoration:none;}
 
-.entry, footer {width:800px;margin:10px auto;background:#eee;padding:10px 20px;display:block;border:1px solid #F2E49B;}
+.entry {width:800px;margin:10px auto;background:#eee;padding:10px 20px;display:block;border:1px solid #F2E49B;}
 .index .entry:hover {background:#f2edd3;}
 
 a#logo {
