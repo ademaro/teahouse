@@ -38,6 +38,31 @@ small, small a {font-size:11px;}
 code {display:block;border:1px solid #ddd;padding:5px;}
 ul {padding-left:30px;}
 ul li {list-style-type:square;}
+table {width:100%;/*
+  -webkit-border-radius: 12px;
+     -moz-border-radius: 12px;
+          border-radius: 12px;
+  -webkit-box-shadow: 0px 0px 10px #6791BF;
+     -moz-box-shadow: 0px 0px 10px #6791BF;
+          box-shadow: 0px 0px 10px #6791BF;
+*/}
+td, th {border:3px solid #ddd;padding:3px 7px;}
+tr {  -webkit-transition: all 0.3s ease-out;  /* Saf3.2+, Chrome */
+     -moz-transition: all 0.3s ease-out;  /* FF4+ */
+      -ms-transition: all 0.3s ease-out;  /* IE10? */
+       -o-transition: all 0.3s ease-out;  /* Opera 10.5+ */
+          transition: all 0.3s ease-out;}
+tr:hover {
+  -webkit-box-shadow: 0px 0px 10px #6791BF; /* Saf3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+     -moz-box-shadow: 0px 0px 10px #6791BF; /* FF3.5 - 3.6 */
+          box-shadow: 0px 0px 10px #6791BF;}
+tr:hover td {text-shadow: 1px 1px 3px #888;background:#e0e0e0;}
+th {background:#ddd;font-weight:bold;text-align:left;}
+
+.cut {clear:both;margin:10px 0;}
+.expand {text-decoration:none;border-bottom:1px dashed;}
+.expand:hover {border:none;}
+#exp {display:none;}
 
 ::-moz-selection {background:#fe57a1;color:#fff;text-shadow:none;}
 ::selection {background:#fe57a1;color:#fff;text-shadow:none;}
@@ -51,6 +76,10 @@ aside a {display:block;}
 
 .entry, aside {margin-bottom:10px;background:#eee;padding:10px 20px;border:1px solid #F2E49B;}
 .index .entry:hover {background:#f2edd3;}
+.preview {float:left;margin:0 15px 10px 0;
+  -webkit-box-shadow: 0px 0px 4px #6791BF; /* Saf3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+     -moz-box-shadow: 0px 0px 4px #6791BF; /* FF3.5 - 3.6 */
+          box-shadow: 0px 0px 4px #6791BF;}
 
 a#logo {
   -webkit-transition: all 0.3s ease-out;  /* Saf3.2+, Chrome */
