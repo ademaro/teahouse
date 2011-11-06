@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-import os
+import os,sys
 
 def rel(*x):
-    return os.path.join(os.path.abspath(os.path.dirname(__file__)), *x)
+    return os.path.join(os.path.abspath(os.path.dirname(sys.argv[0])), *x)
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -70,7 +70,7 @@ STATIC_URL = '/media/'
 # Additional locations of static files
 STATICFILES_DIRS = (
     # rel('static'),
-    '/usr/local/lib/python2.7/dist-packages/django/contrib/admin/static',
+    #'/usr/local/lib/python2.7/dist-packages/django/contrib/admin/static',
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -133,29 +133,6 @@ INSTALLED_APPS = (
 # the site admins on every HTTP 500 error when DEBUG=False.
 # See http://docs.djangoproject.com/en/dev/topics/logging for
 # more details on how to customize your logging configuration.
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'filters': {
-        'require_debug_false': {
-            '()': 'django.utils.log.RequireDebugFalse'
-        }
-    },
-    'handlers': {
-        'mail_admins': {
-            'level': 'ERROR',
-            'filters': ['require_debug_false'],
-            'class': 'django.utils.log.AdminEmailHandler'
-        }
-    },
-    'loggers': {
-        'django.request': {
-            'handlers': ['mail_admins'],
-            'level': 'ERROR',
-            'propagate': True,
-        },
-    }
-}
 
 try:
     from local_settings import *
