@@ -1,3 +1,5 @@
+﻿# -*- coding: utf-8 -*-
+
 from django.conf.urls import patterns, include, url
 
 from django.contrib import admin
@@ -11,7 +13,7 @@ urlpatterns = patterns('',
     url(r'^$', 'blog.views.index'),
     url(r'^entry/(\d+)/$', '_tea.blog.views.entry'), 
     url(r'^tags/(\d+)/$', '_tea.blog.views.tags'), 
-    url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}), 
+    url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': 'H:/teahouse/_tea/static'}),
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
