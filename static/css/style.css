@@ -87,12 +87,11 @@ a#logo {
       -ms-transition: all 0.3s ease-out;  /* IE10? */
        -o-transition: all 0.3s ease-out;  /* Opera 10.5+ */
           transition: all 0.3s ease-out;  
-background:url(http://img695.imageshack.us/img695/4489/cirnoj.png) no-repeat 50% 0;display:block;margin:10px auto;width:128px;height:128px;border:1px solid #EEE;text-indent: -9999px;}
+background:url(http://hostingkartinok.com/image/01201111/bf71da9309d02a2fb0b2ca8790c7d938.jpg) no-repeat 50% 0;display:block;margin:10px auto;width:340px;height:200px;border:1px solid #EEE;/*text-indent: -9999px;*/text-align:center;line-height:340px;}
 a#logo:hover {
   -webkit-box-shadow: 0px 0px 4px #777;
      -moz-box-shadow: 0px 0px 4px #777;
           box-shadow: 0px 0px 4px #777;}
-
 
 a.admin {position:fixed;left:5px;bottom:5px;font-size:11px;padding:3px 5px;
   -webkit-box-shadow: 0px 0px 4px #444; /* Saf3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
