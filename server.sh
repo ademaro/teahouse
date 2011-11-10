@@ -2,12 +2,13 @@
 
 PROJDIR="/var/www/z-gu.ru/_tea"
 PIDFILE="$PROJDIR/server.pid"
+METHOD="threaded" #prefork for bigmem
 
 cd $PROJDIR
 
 case "$1" in
  "start")
-   exec python ./manage.py runfcgi method=prefork host=127.0.0.1 port=8881 pidfile=$PIDFILE
+   exec python ./manage.py runfcgi method=$METHOD host=127.0.0.1 port=8881 pidfile=$PIDFILE
  ;;
  "stop")
    kill -9 `cat -- $PIDFILE`

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+USER="tea"
+PROJDIR="/var/www/z-gu.ru/_tea"
+PIDFILE="$PROJDIR/server.pid"
+METHOD="threaded" #prefork for bigmem
+
+cd $PROJDIR
+
+exec envuidgid $USER python manage.py runfcgi method=$METHOD host=127.0.0.1 port=8881 pidfile=$PIDFILE minspare=4 maxspare=30 daemonize=false

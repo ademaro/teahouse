@@ -1,6 +1,10 @@
-//$(document).ready(function() {
-  
-//});
+$(document).ready(function() {
+  $("a[rel=zoom]").fancybox({
+    'titlePosition' 	: 'over',
+    'titleFormat'	: function(title, currentArray, currentIndex, currentOpts) {
+					return '<span id="fancybox-title-over">Image ' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';}
+  });
+});
 
 $('a.expand').bind('click', function(event) {
   var ttt = $(this).text();
