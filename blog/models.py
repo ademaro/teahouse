@@ -30,3 +30,6 @@ class Entry(models.Model):
         ordering = ['-date_publication']
         verbose_name = 'Запись'
         verbose_name_plural = 'Записи'
+   
+#    class Admin:
+#        js = ('/static/js/jquery.js',)

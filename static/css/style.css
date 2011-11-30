@@ -34,6 +34,8 @@ h4,h5 {font-size:18px;}
 a,p {font-size:18px;}
 a {color:#6791BF;}
 
+header {}
+
 small, small a {font-size:11px;}
 code {display:block;border:1px solid #ddd;padding:5px;}
 ul {padding-left:30px;}
@@ -89,27 +91,52 @@ a#logo {
     transition: all 0.3s ease-out;
     background:url(http://hostingkartinok.com/image/01201111/bf71da9309d02a2fb0b2ca8790c7d938.jpg) no-repeat 50% 0;display:block;margin:10px auto;width:340px;height:200px;border:1px solid #EEE;/*text-indent: -9999px;*/text-align:center;line-height:340px;}
 a#logo:hover {
+background-image:url(http://img829.imageshack.us/img829/1120/97339046.gif);
+width:280px;height:280px;line-height: 540px;
+text-shadow:1px 1px 3px #777;
     -webkit-box-shadow: 0px 0px 4px #777;
     -moz-box-shadow: 0px 0px 4px #777;
     box-shadow: 0px 0px 4px #777;}
 
 a.admin {position:fixed;left:5px;bottom:5px;font-size:11px;padding:3px 5px;
-    -webkit-box-shadow: 0px 0px 4px #444; /* Saf3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-    -moz-box-shadow: 0px 0px 4px #444; /* FF3.5 - 3.6 */
-    box-shadow: 0px 0px 4px #444;}
-a.admin:hover {background:#363D06;color:#fff;}
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    -webkit-box-shadow: 0px 0px 2px #444;
+    -moz-box-shadow: 0px 0px 2px #444;
+    box-shadow: 0px 0px 2px #444;background:#fff;}
+a.admin:hover {background:#363D06;color:#fff;
+    -webkit-box-shadow: 0px 0px 6px #444;
+    -moz-box-shadow: 0px 0px 6px #444;
+    box-shadow: 0px 0px 6px #444;}
 .tar {text-align:right;}
 
 a[rel="zoom"] {float:left;margin:0 10px 10px 0;padding:5px;border:1px solid #e5e5e5;background:#fff;
-    -webkit-transition: all 0.3s ease-out;  /* Saf3.2+, Chrome */
-    -moz-transition: all 0.3s ease-out;  /* FF4+ */
-    -ms-transition: all 0.3s ease-out;  /* IE10? */
-    -o-transition: all 0.3s ease-out;  /* Opera 10.5+ */
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;}
 a[rel="zoom"]:hover {border:1px solid #ddd;
     -webkit-box-shadow: 1px 1px 3px #333; /* Saf3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
     -moz-box-shadow: 1px 1px 3px #333; /* FF3.5 - 3.6 */
     box-shadow: 1px 1px 3px #333;}
 a[rel="zoom"] img {height:80px;vertical-align:middle;}
+
+.shadow3d {text-shadow: 0 1px 0 #ccc,
+			 0 2px 0 #c9c9c9,
+			 0 3px 0 #bbb,
+			 0 4px 0 #b9b9b9,
+			 0 5px 0 #aaa,
+			 0 6px 1px rgba(0,0,0,.1),
+			 0 0 5px rgba(0,0,0,.1),
+			 0 1px 3px rgba(0,0,0,.3),
+			 0 3px 5px rgba(0,0,0,.2),
+			 0 5px 10px rgba(0,0,0,.25),
+			 0 10px 10px rgba(0,0,0,.2),
+			 0 20px 20px rgba(0,0,0,.15);
+}
 
 br {clear:both;}
