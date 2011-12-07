@@ -3,10 +3,13 @@ from django.http import Http404
 from django.shortcuts import render_to_response
 from _tea.blog.models import Entry, Category
 
+import datetime
+
 def index(request):
     entry_list = Entry.objects.all()
     categories = Category.objects.all()
-    return render_to_response('index.html', {'entry_list': entry_list, 'categories': categories})
+    #tags = (entry_list, Category.objects.get(id=entry_list[]))	
+    return render_to_response('index.html', {'entry_list': entry_list, 'categories': categories, 'tags': tags})
 
 def entry(request, entry_id):
     try:

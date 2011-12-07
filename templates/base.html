@@ -11,7 +11,8 @@
 <body>
 <a href="/" id="logo">Ниндзя Пират</span></a>
 <header class="wrap"> 
-  Показывать <button>всё</button> или <button disabled>без бреда</button>
+  Показывать <button id=b-all>всё</button> или <button id=b-nobred disabled>без бреда</button>
+  {{ tags }}
 </header>
 <div class="wrap">
   <aside>
@@ -35,6 +36,9 @@
 
 <script src="//yandex.st/jquery/fancybox/1.3.4/jquery.fancybox.min.js"></script>
 <script>window.jQuery || document.write('<script src="/js/libs/jquery.fancybox.min.js"><\/script>')</script><!-- TODO: this -->
+
+<script src="//yandex.st/jquery/cookie/1.0/jquery.cookie.min.js"></script>
+<script>window.jQuery || document.write('<script src="#TODO"><\/script>')</script><!-- TODO: this -->
 
 <script defer src="/js/script.js"></script>
 

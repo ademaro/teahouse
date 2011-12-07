@@ -6,6 +6,13 @@ $(document).ready(function() {
   });
 });
 
+$('button#b-all').bind('click', function(event) {
+  $.cookie("nobred", 1);
+  $('button#b-all').attr("disabled", true);
+  $('button#b-nobred').removeAttr("disabled");
+  //return false;
+});
+
 $('a.expand').bind('click', function(event) {
   var ttt = $(this).text();
   if (ttt == 'Развернуть'){

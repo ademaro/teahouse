@@ -9,7 +9,7 @@
 {% if entry %}
 <div class="entry">
   <h2>{{ entry.title }}</h2>
-  {{ entry.text|markdown }}
+  {{ entry.text|safe }}
   <br>
   <small>Категории: 
     {% for tag in tags %}
