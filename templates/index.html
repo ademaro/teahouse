@@ -7,11 +7,11 @@
 
 <div class="index">
 {% block body %}
+{% if category %}<h2>Записи из категории &laquo;{{ category }}&raquo;:</h2>{% endif %}
 {% if entry_list %}
   {% for entry in entry_list %}
   <div class="entry">
-    {% if category %}<h2>Записи из категории &laquo;{{ category }}&raquo;:</h2>{% endif %}
-    <h2><a href="/entry/{{ entry.id }}/">{{ entry.title }}</a></h2>
+   <h2><a href="/entry/{{ entry.id }}/">{{ entry.title }}</a></h2>
     {{ entry.text|safe }}
     <br>
     <small>Дата публикации: {{ entry.date_publication }}</small>
