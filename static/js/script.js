@@ -6,12 +6,20 @@ $(document).ready(function() {
   });
 });
 
+/*
 $('button#b-all').bind('click', function(event) {
-  $.cookie("nobred", 1);
-  $('button#b-all').attr("disabled", true);
-  $('button#b-nobred').removeAttr("disabled");
-  //return false;
+    $.cookie("wbred", 0);
+    $('button#b-all').attr("disabled", true);
+    $('button#b-nobred').removeAttr("disabled");
+    //return false;
 });
+$('button#b-nobred').bind('click', function(event) {
+    $.cookie("wbred", 1);
+    $('button#b-nobred').attr("disabled", true);
+    $('button#b-all').removeAttr("disabled");
+    //return false;
+});
+*/
 
 $('a.expand').bind('click', function(event) {
   var ttt = $(this).text();

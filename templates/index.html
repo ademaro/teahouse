@@ -5,16 +5,24 @@
 
 {% load markup %}
 
+{% block header %}
+<header class="wrap">
+    Показывать <!--<button id=b-all>всё</button> или <button id=b-nobred disabled>без бреда</button>-->
+    <a{% if bred == "enabled" %} class="active"{% endif %} href="?bred=enable">с бредом</a> <a{% if bred == "disabled" %} class="active"{% endif %} href="?bred=disable">без бреда</a>
+</header>
+{% endblock %}
+
 <div class="index">
 {% block body %}
 {% if category %}<h2>Записи из категории &laquo;{{ category }}&raquo;:</h2>{% endif %}
 {% if entry_list %}
   {% for entry in entry_list %}
-  <div class="entry">
+  <div class="entry{% for tag in entry.category.all %}{% if tag.id == 13 %} bred{% endif %}{% endfor %}">
    <h2><a href="/entry/{{ entry.id }}/">{{ entry.title }}</a></h2>
     {{ entry.text|safe }}
     <br>
-    <small>Дата публикации: {{ entry.date_publication }}</small>
+    <small>Категории: {% for tag in entry.category.all %}{% if not forloop.first %}, {% endif %}{{ tag }}{% endfor %}<br>
+        Дата публикации: {{ entry.date_publication }}</small>
   </div>
   {% endfor %}
 {% else %}

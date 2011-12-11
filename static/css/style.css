@@ -35,7 +35,7 @@ html { font-size:100%; overflow-y:scroll; -webkit-text-size-adjust:100%; -ms-tex
 
 body { margin:0; font-size:1em; line-height:1.4; }
 
-body, button, input, select, textarea { font-family:sans-serif; color:#222; }
+body, button, input, select, textarea { font-family:sans-serif; }
 
 /*
  * Remove text-shadow in selection highlight:h5bp.com/i
@@ -52,7 +52,6 @@ body, button, input, select, textarea { font-family:sans-serif; color:#222; }
    ========================================================================== */
 
 a { color:#00e; }
-a:visited { color:#551a8b; }
 a:hover { color:#06e; }
 a:focus { outline:thin dotted; }
 
@@ -167,7 +166,7 @@ button, input { line-height:normal; }
  */
 
 button, input[type="button"], input[type="reset"], input[type="submit"] { cursor:pointer; -webkit-appearance:button; *overflow:visible; }
-
+button[disabled] { cursor:default; }
 /*
  * Consistent box sizing and appearance
  */
@@ -220,7 +219,8 @@ h4,h5 {font-size:18px;}
 a,p {font-size:18px;}
 a {color:#6791BF;}
 
-header {}
+header, header a {font-size:12px;}
+header a.active {text-decoration: none;}
 
 small, small a {font-size:11px;}
 code {display:block;border:1px solid #ddd;padding:5px;}
@@ -258,11 +258,14 @@ th {background:#ddd;font-weight:bold;text-align:left;}
 a:hover {text-decoration:none;}
 
 .wrap {width:1000px;margin:0 auto;}
-aside {width:150px;float:left;}
+aside {width:125px;float:left;}
 aside a {display:block;}
-#main {width:840px;margin-left:200px;}
+#main {width:833px;float:right;}
 
-.entry, aside {margin-bottom:10px;background:#eee;padding:10px 20px;border:1px solid #F2E49B;}
+.nobred .bred {display:none;}
+
+.entry, aside {margin-bottom:10px;background:#eee;padding:10px 15px;border:1px solid #F2E49B;}
+.entry small {clear:both;display: block;}
 .index .entry:hover {background:#f2edd3;}
 .preview {float:left;margin:0 15px 10px 0;
     -webkit-box-shadow:0 0 4px #6791BF; /* Saf3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
@@ -325,7 +328,6 @@ a[rel="zoom"] img {height:80px;vertical-align:middle;}
     0 20px 20px rgba(0,0,0,.15);
 }
 
-br {clear:both;}
 
 
 
