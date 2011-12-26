@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.http import Http404
 from django.shortcuts import render_to_response
 from _tea.blog.models import Entry, Category
@@ -14,10 +15,20 @@ def index(request):
         request.session['bred'] = 'disabled'
 
     bred = request.session.get('bred')
-    entry_list = Entry.objects.all().filter(date_publication__lte=datetime.now())
+    entry_list = Entry.objects.filter(date_publication__lte=datetime.now()).exclude(id__exact=13)
+
+    paginator = Paginator(entry_list, 5, 2)
+    page = request.GET.get('page')
+    try:
+        entries = paginator.page(page)
+    except PageNotAnInteger:
+        entries = paginator.page(1)
+    except EmptyPage:
+        entries = paginator.page(paginator.num_pages)
+
     categories = Category.objects.all()
     #tags = 0 #(entry_list, Category.objects.get(id=entry_list[]))
-    return render_to_response('index.html', {'entry_list': entry_list, 'categories': categories, 'bred':bred })
+    return render_to_response('index.html', {'entry_list': entries, 'categories': categories, 'bred': bred })
 
 def entry(request, entry_id):
     try:

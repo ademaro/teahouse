@@ -210,16 +210,16 @@ td { vertical-align:top; }
  */
 html, body {height:100%;width:100%;display:block;}
 body {background-color:#f5f5f5;color:#474F13;
-    font-family:Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans serif;}
+    font-family:Frutiger, "Frutiger Linotype", Univers, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", Calibri, "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans serif;}
 body > h1 {padding-top:20px;}
 h1,h2,h3,h4,h5 {color:#9fab4f;text-shadow:1px 1px 3px #B3BF67;font-size:50px;margin:5px 0 25px;}
 h2,h2 a {font-size:36px;}
-h3,h3 a {font-size:28px;}
+h3,h3 a {font-size:24px;font-weight:normal;}
 h4,h5 {font-size:18px;}
 a,p {font-size:18px;}
 a {color:#6791BF;}
 
-header, header a {font-size:12px;}
+header, header a {font-size:12px;text-shadow:white -1px -1px 1px, black 0 0 2px;}
 header a.active {text-decoration: none;}
 
 small, small a {font-size:11px;}
@@ -278,7 +278,7 @@ a#logo {
     -ms-transition:all 0.3s ease-out;  /* IE10? */
     -o-transition:all 0.3s ease-out;  /* Opera 10.5+ */
     transition:all 0.3s ease-out;
-    background:url(http://hostingkartinok.com/image/01201111/bf71da9309d02a2fb0b2ca8790c7d938.jpg) no-repeat 50% 0;display:block;margin:10px auto;width:340px;height:200px;border:1px solid #EEE;/*text-indent:-9999px;*/text-align:center;line-height:340px;}
+    background:url(http://hostingkartinok.com/image/01201111/bf71da9309d02a2fb0b2ca8790c7d938.jpg) no-repeat 50% 0;display:block;margin:0 auto 10px;width:340px;height:200px;border:1px solid #EEE;/*text-indent:-9999px;*/text-align:center;line-height:340px;}
 a#logo:hover {
     background-image:url(http://img829.imageshack.us/img829/1120/97339046.gif);
     width:280px;height:280px;line-height:540px;

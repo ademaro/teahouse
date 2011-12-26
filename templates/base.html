@@ -14,11 +14,27 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/jquery.fancybox.css">
+    <link rel="stylesheet" href="/css/sun.css">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <script src="/js/libs/modernizr-2.0.6.min.js"></script>
 </head>
 <body{% if bred == "disabled" %} class="nobred"{% endif %}>
+<div id="sun-block">
+    <div id="sun">
+        <div id="sunsetSun"></div>
+    </div>
+    <div id="sky"></div>
+    <div id="sunsetSky"></div>
+    <div id="nightSky"></div>
+    <div id="grass"></div>
+    <div id="nightGrass"></div>
+<!--
+    <div id="interface" style="z-index:999;">
+        <a href="#">Анимировать заход</a>
+    </div>
+-->
+</div>
 <a href="/" id="logo">Ниндзя Пират</span></a>
 {% block header %}{% endblock %}
 <div class="wrap">
@@ -47,6 +63,8 @@
 <script src="//yandex.st/jquery/cookie/1.0/jquery.cookie.min.js"></script>
 <script>window.jQuery || document.write('<script src="#TODO"><\/script>')</script><!-- TODO: this -->
 
+<script defer src="/js/dom-drag.js"></script>
+<script defer src="/js/sun.js"></script>
 <script defer src="/js/script.js"></script>
 
 <!-- Piwik --> 

@@ -30,5 +30,20 @@
     <p>Записей{%if category %} из категории &laquo;{{ category }}&raquo;{% endif %} нету.</p>
   </div>
 {% endif %}
+<div class="pagination">
+    <span class="step-links">
+        {% if entry_list.has_previous %}
+            <a href="?page={{ entry_list.previous_page_number }}">назад</a>
+        {% endif %}
+
+        <span class="current">
+            страница {{ entry_list.number }} из {{ entry_list.paginator.num_pages }}.
+        </span>
+
+        {% if entry_list.has_next %}
+            <a href="?page={{ entry_list.next_page_number }}">вперед</a>
+        {% endif %}
+    </span>
+</div>
 {% endblock %}
 </div>
